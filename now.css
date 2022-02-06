@@ -1,0 +1,42 @@
+body.now {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.row {
+    display: table;
+    width: 100%;
+    padding: 10px;
+}
+
+.col {
+    display: table-cell;
+    width: 47%;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+img.thumb {
+    display: block;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.btn {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0);
+    color: white;
+    padding: 5px;
+}
+
+.btn:hover {
+    background: rgb(255, 180, 180);
+    color: rgb(0, 0, 0);
+}

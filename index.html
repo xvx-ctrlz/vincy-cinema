@@ -1,0 +1,94 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+    <Title>Welcome to Chaplin's Cinema</Title>
+
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="movies.js"></script>
+
+
+</head>
+
+<body>
+    <div class="menu">
+        <a href="#">HOME |</a>
+        <a href="now.html">NOW SHOWING |</a>
+        <a href="ticket.html">TICKET</a>
+    </div>
+
+    <div class="header">
+
+        <a href="index.html"><img src="images/chaplin.png" class="logo1" alt="logo of the cinema"></a>
+        <a href="index.html"><img src="images/cinema.png" class="logo" alt="logo of the cinema"></a>
+
+        <h1>
+            <marquee>Welcome to Chaplin's Cinema!</marquee>
+        </h1>
+    </div>
+    <script>
+        document.write('<video width="472" height="345.828" controls id="myVideo">' + '<source src="' + getMovies()[0].src + '" type="video/mp4" controls onended="playNext()">' + 'Your browser does not support the video tag.</video>');
+        document.write('<h2 id="output">' + Videoindex + '</h2>');
+    </script>
+
+    <script>
+    </script>
+
+    <script>
+        var vid = document.getElementById("myVideo");
+
+        function playVid() {
+            vid.play();
+        }
+
+        function pauseVid() {
+            vid.pause();
+        }
+
+        function playNext() {
+
+        }
+
+        function playThis() {
+
+        }
+    </script>
+
+
+
+    <div class="topic">List of movies: upcoming</div>
+    <script>
+        for (i = 0; 1 < getMovies().length; i++) {
+            if (getMovies()[i].type == "upcoming") {
+                document.write('<div class="col-container"><div ="col"><img onclick="pauseVid()" src ="' + getMovies()[i].thumbnail + '" class = "thumb"></div>')
+                document.write('<div class="col">' + '<br>Name:' + getMovies()[i].name);
+                document.write('<br>Cast:' + getMovies()[i].cast);
+                document.write('<br>Director:' + getMovies()[i].director);
+                document.write('<br>Duration:' + getMovies()[i].duration + '</div></div>');
+            }
+
+        }
+    </script>
+    <div class="topic">List of movies: Now showing</div>
+    <script>
+        for (i = 0; 1 < getMovies().length; i++) {
+            if (getMovies()[i].type === "now") {
+                document.write('<div class="col-container"><div ="col"><img onclick="playThis()" src ="' + getMovies()[i].thumbnail + '" class = "thumb" ></div>')
+                document.write('<div class="col">' + '<br>Name:' + getMovies()[i].name);
+                document.write('<br>Cast:' + getMovies()[i].cast);
+                document.write('<br>Director:' + getMovies()[i].director);
+                document.write('<br>Duration:' + getMovies()[i].duration + '</div></div>');
+            }
+
+        }
+    </script>
+
+    <div class="footer">
+        <br>@Copyright of resources belong to corresponding copyright owners -
+        <br>fair use for education purpose
+        <br><a href="index.html">BACK TO HOME</a> | <a href="design.html"> DESIGN</a></h6>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+marquee {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border: 0px;
+    margin: 0px;
+}
+
+iframe {
+    text-align: center;
+}
+
+a:link {
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(253, 168, 168);
+}
+
+a:active {
+    color: rgb(255, 104, 104);
+}
+
+a:visited {
+    color: rgb(192, 158, 255);
+}
+
+video {
+    display: flex;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.topic {
+    font-size: large;
+    font-weight: bold;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.menu {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0px;
+}
+
+.menu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.menu a:hover {
+    background: rgb(255, 180, 180);
+    color: rgb(70, 70, 70);
+}
+
+video {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-container {
+    display: table;
+    width: 100%;
+    padding: 10px;
+}
+
+.col {
+    display: table-cell;
+    width: 47%;
+    vertical-align: middle;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+img.thumb {
+    width: 150px;
+    display: block;
+    margin-right: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.footer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 20%;
+    color: white;
+    text-align: center;
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    padding: 5px;
+}
+
+img.logo1 {
+    height: 300px;
+    animation: movetoright 3s linear;
+}
+
+@keyframes movetoright {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(270px);
+    }
+}
+
+img.logo {
+    height: 300px;
+    animation: movetoleft 3s linear;
+}
+
+@keyframes movetoleft {
+    0% {
+        transform: translateX(270px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.titleofdesign {
+    width: 100%;
+    padding-top: 30px;
+}

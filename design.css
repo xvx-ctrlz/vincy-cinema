@@ -1,0 +1,87 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    padding: 0px;
+}
+
+.menu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.menu a:hover {
+    background: rgb(255, 180, 180);
+    color: rgb(0, 0, 0);
+}
+
+.btn {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0);
+    color: white;
+    padding: 5px;
+}
+
+.btn:hover {
+    background: rgb(255, 180, 180);
+    color: rgb(0, 0, 0);
+}
+
+.footer {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 20%;
+    color: white;
+    text-align: center;
+    background-color: rgb(36, 36, 36);
+    width: 100%;
+    padding: 5px;
+}
+
+a.link:link {
+    color: rgb(17, 17, 17);
+    text-decoration: none;
+}
+
+a.link:hover {
+    color: rgb(87, 154, 255);
+}
+
+a.link:visited {
+    color: rgb(192, 158, 255);
+}
+
+a.link:active {
+    color: rgb(255, 98, 98);
+}
+
+img.overall {
+    height: 30%;
+}
+
+p {
+    padding: 8px;
+}
+
+.para {
+    padding: 30px;
+    font-size: 14px;
+    text-align: left;
+}
+
+img {
+    border: 3px solid rgb(58, 58, 58);
+    border-radius: 10px;
+}
+
+img.css3 {
+    width: 400px;
+}

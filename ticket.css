@@ -1,0 +1,80 @@
+body.ticket {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+table.seat {
+    width: 35%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #919191;
+    border-radius: 10px;
+}
+
+.screen {
+    background-color: rgb(53, 53, 53);
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 15%;
+}
+
+.seatbox {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 2px solid #919191;
+    background-color: green;
+    text-align: center;
+    padding: 2px;
+    line-height: 50px;
+    /*line-height=80px 會令個行距同個box一樣，個字就可以在打直方向的中間*/
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.row {
+    margin-top: 2%;
+}
+
+p {
+    padding: 5px;
+}
+
+input {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus {
+    background-color: #ddd;
+}
+
+.confirm {
+    background: white;
+    width: 100%;
+    padding: 15px;
+}
+
+.submit {
+    background-color: #ffbbbb;
+    color: black;
+    padding: 10px;
+    margin: 0px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.submit:hover {
+    opacity: 2;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+    <Title>Welcome to Chaplin's Cinema</Title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="ticket.css">
+    <script>
+        function passvalues() {
+            var seatschosen = document.getElementById("seatschosen").value;
+            localStorage.setItem("seatschosen", seatschosen);
+            return false;
+        }
+    </script>
+
+</head>
+
+
+<body class="ticket">
+    <div class="menu">
+        <a href="index.html">HOME |</a>
+        <a href="now.html">NOW SHOWING |</a>
+        <a href="#">TICKET</a>
+    </div>
+
+    <div class="header">
+
+        <a href="index.html"><img src="images/chaplin.png" class="logo1" alt="logo of the cinema"></a>
+        <a href="index.html"><img src="images/cinema.png" class="logo" alt="logo of the cinema"></a>
+
+        <h1>
+            <marquee>Chaplin's Cinema - Please pick your seat!</marquee>
+        </h1>
+    </div>
+
+    </h1>
+
+
+    <p>
+        <br><b>Cinema - Lam Tin</b>
+        <br><b>Movie - Wildlife</b>
+        <br><b>13 October 2020, Tue 09:00 am</b>
+        <br><b>House 5</b>
+    </p>
+
+    <br>
+    <div class="screen">SCREEN</div>
+    <script>
+        var rows = "ABCDE";
+        for (i = 0; i < rows.length; i++) {
+            document.write('<div class="row">');
+            for (j = 1; j <= 8; j++) {
+                document.write('<div class="seatbox" id="', rows.charAt(i), j, '" ',
+                    'onmouseover="this.style.backgroundColor=\'pink\';" ',
+                    'onmouseout="restoreColor(this.id);" ',
+                    'onclick="toggle(this.id);"',
+                    '>', rows.charAt(i), j, '</div>');
+            }
+            document.write('</div>');
+        }
+    </script>
+    <p>
+
+        <form action="print.html">
+            <p>Green= Available Red=Reserved</p>
+
+            <br>Please Click on the seating plan in the above.
+            <br>Selected Seats:<span id="selectedSeatsID"></span>
+            <input type="hidden" name="seatschosen" id="seatschosen" value="">
+            <div class="confirm"><input onclick="passvalues();" type="submit" class="submit" value="Confirm" />
+            </div>
+        </form>
+
+        <script>
+            var selectedseats = []; //'A1','E3','F3'
+
+            function toggle(seatId) {
+                var a = selectedseats.indexOf(seatId);
+                if (a == -1)
+                    add(seatId);
+                else
+                    cancel(seatId);
+            }
+
+            function add(seatId) {
+                selectedseats.push(seatId);
+                updateSelectedSeats();
+                document.getElementById(seatId).style.backgroundColor = 'red';
+                document.getElementById(seatId).style.textDecoration = 'line-through';
+            }
+
+            function cancel(seatId) {
+                var a = selectedseats.indexOf(seatId);
+                //selectedseats.splice(a, 1);
+                updateSelectedSeats();
+                document.getElementById(seatId).style.backgroundColor = 'red';
+                document.getElementById(seatId).style.textDecoration = 'line-through';
+            }
+
+            function no(seatId) {
+                var a = selectedseats.indexOf(seatId);
+                selectedseats.splice(a, 1);
+                updateSelectedSeats();
+                document.getElementById(seatId).style.backgroundColor = 'green';
+                document.getElementById(seatId).style.textDecoration = ' ';
+            }
+
+
+            function restoreColor(seatId) {
+                var a = selectedseats.indexOf(seatId);
+                if (a == -1)
+                    document.getElementById(seatId).style.backgroundColor = 'green';
+                else
+                    document.getElementById(seatId).style.backgroundColor = 'red';
+
+            }
+
+
+            function updateSelectedSeats() {
+                var s = "";
+                selectedseats.sort();
+
+                for (x of selectedseats) {
+                    if (s.length <= 4) {
+                        s += x + ' ';
+                    } else {
+                        alert('You could only choose two seats so this seat cannot be booked.');
+                        no();
+                    }
+
+                }
+                document.getElementById('selectedSeatsID').innerHTML = s;
+                document.getElementById('seatschosen').value = s;
+            }
+        </script>
+</body>
+
+<div class="footer">
+    <h6>@Copyright of resources belong to corresponding copyright owners -
+        <br>fair use for education purpose
+        <br><a href="index.html">BACK TO HOME</a> | <a href="design.html"> DESIGN</a></h6>
+
+</div>
+</p>
+
+</body>
+
+</html>

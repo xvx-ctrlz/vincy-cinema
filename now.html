@@ -1,0 +1,75 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+    <title>Now Showing!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="now.css">
+    <script>
+        function passvalues() {
+            var cinema = document.getElementById("cinema").value;
+            localStorage.setItem("cinema", cinema);
+            var mov = document.getElementById("mov").value;
+            localStorage.setItem("mov", mov);
+            var date = document.getElementById("date").value;
+            localStorage.setItem("date", date);
+            var house = document.getElementById("house").value;
+            localStorage.setItem("house", house);
+            var seatschosen = document.getElementById("seatschosen").value;
+            localStorage.setItem("seatschosen", seatschosen);
+            return false;
+        }
+    </script>
+
+</head>
+
+<body class="now">
+
+    <div class="menu">
+        <a href="index.html">HOME |</a>
+        <a href="#">NOW SHOWING |</a>
+        <a href="ticket.html">TICKET</a>
+    </div>
+
+    <div class="header">
+
+        <a href="index.html"><img src="images/chaplin.png" class="logo1" alt="logo of the cinema"></a>
+        <a href="index.html"><img src="images/cinema.png" class="logo" alt="logo of the cinema"></a>
+
+        <h1>
+            <marquee>Chaplin's Cinema - The followings are the movies showing now!</marquee>
+        </h1>
+    </div>
+
+
+    <script>
+        function random() {
+            var a = document.getElementById('cinema').value;
+            if (a == getCinemas()[i])
+        }
+    </script>
+
+
+    <div>
+        <b>Locations of the cinemas:
+            <p>1.Chaplin's Cinema - Lam Tin
+            <br>Kai Tin Shopping Centre
+            <br><a href="https://goo.gl/maps/VSLsVFQ4HHn3vXB28"><img src="images/lamtin.png"></a>
+            <p>2.Chaplin's Cinema - Kwun Tong
+            <br>APM
+            <br><a href="https://goo.gl/maps/cT2nNS6aaG98gB3z5"><img src="images/kwuntong.png"></a>
+            <p>3.Chaplin's Cinema - Kowloon Bay
+            <br>Telford Plaza
+            <br><a href="https://goo.gl/maps/VZjyb9F8bokytZYi8"><img src="images/kowloonbay.png"></a>
+        </div>
+   
+
+
+			<div class="footer">
+				<h6>@Copyright of resources belong to correspondTueing copyright owners - 
+					<br>fair use for education purpose
+					<br><a href="index.html">BACK TO HOME</a> | <a href="design.html"> DESIGN</a>
+				</h6>
+				</div>
+</body>
+</html>

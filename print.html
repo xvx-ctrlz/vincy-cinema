@@ -1,0 +1,68 @@
+<!DOCTYPE html5>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm your ticket!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="print.css">
+</head>
+
+
+<body>
+    <div class="menu">
+        <a href="index.html">HOME |</a>
+        <a href="now.html">NOW SHOWING |</a>
+        <a href="ticket.html">TICKET</a>
+    </div>
+
+
+    <div class="row">
+        <div class="ticket">
+
+            <h3>Ticket 1:</h3>
+            <hr>
+            <br>Cinema:<span id="cinema"></span>
+            <br>Movie: <span id="mov"></span>
+            <br>Date & Time:<span id="date"></span>
+            <br>House No.: <span id="house"></span>
+            <br>Seat: <span id="seatschosen"></span>
+
+        </div>
+
+        <div class="ticket">
+
+            <h3>Ticket 2:</h3>
+            <hr>
+            <br>Cinema:<span id="cinema2"></span>
+            <br>Movie: <span id="mov2"></span>
+            <br>Date & Time:<span id="date2"></span>
+            <br>House No.: <span id="house2"></span>
+            <br>Seat: <span id="seatschosen2"></span>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="confirmticket">
+        <button type="submit" class="submit">Confirm and Print!</button>
+    </div>
+
+    <script>
+        document.getElementById("cinema").innerHTML = localStorage.getItem("cinema");
+        document.getElementById("cinema2").innerHTML = localStorage.getItem("cinema");
+        document.getElementById("mov").innerHTML = localStorage.getItem("mov");
+        document.getElementById("mov2").innerHTML = localStorage.getItem("mov");
+        document.getElementById("date").innerHTML = localStorage.getItem("date");
+        document.getElementById("date2").innerHTML = localStorage.getItem("date");
+        document.getElementById("house").innerHTML = localStorage.getItem("house");
+        document.getElementById("house2").innerHTML = localStorage.getItem("house");
+        document.getElementById("seatschosen").innerHTML = localStorage.getItem("seatschosen");
+        document.getElementById("seatschosen2").innerHTML = localStorage.getItem("seatschosen");
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+body {
+    text-align: center;
+}
+
+.row {
+    display: table;
+    width: 100%;
+}
+
+.ticket {
+    display: table-cell;
+    width: 50%;
+    vertical-align: middle;
+    padding: 10px;
+    background-color: white;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus {
+    background-color: #ddd;
+}
+
+.submit {
+    background-color: #333333;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.7;
+}
+
+.submit:hover {
+    opacity: 2;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 30px;
+}
+
+.confirmticket {
+    background: white;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+@media print {
+    .menu,
+    .header {
+        visibility: hidden;
+    }
+    .row {
+        page-break-before: avoid;
+        visibility: visible;
+        left: 0;
+        top: 0;
+    }
+    .confirmticket,
+    .footer {
+        visibility: hidden;
+    }
+}
+
+@page {
+    size: A4 landscape;
+    position: absolute;
+    page-break-inside: avoid;
+}
