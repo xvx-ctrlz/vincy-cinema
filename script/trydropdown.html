@@ -1,0 +1,74 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+
+
+    <select id="cin" value="select cinemas">
+            <option value="">-- Select --</option>
+        </select>
+
+    <script>
+        function getCinemas() {
+            return [{
+                branchName: "City Cinema - Lam Tin",
+                movies: [{
+                    id: 1,
+                    shows: [{
+                        index: 1,
+                        datetime: "8 Nov, Sun - 9:00am",
+                        house: 3
+                    }, {
+                        index: 2,
+                        datetime: "10 Nov, Tue - 11:00am",
+                        house: 3
+                    }]
+                }, {
+                    id: 2,
+                    shows: [{
+                        index: 3,
+                        datetime: "9 Nov, Mon - 2:00pm",
+                        house: 1
+                    }]
+                }]
+            }, {
+                branchName: "City Cinema - Kwun Tong",
+                movies: [{
+                    id: 2,
+                    shows: [{
+                        index: 4,
+                        datetime: "11 Nov, Wed - 9:00am",
+                        house: 4
+                    }, {
+                        index: 5,
+                        datetime: "11 Nov, Wed - 11:00am",
+                        house: 2
+                    }]
+                }]
+            }, {
+                branchName: "City Cinema - Kowloon Bay",
+                movies: [{
+                    id: 1,
+                    shows: [{
+                        index: 6,
+                        datetime: "11 Nov, Wed - 9:00am",
+                        house: 4
+                    }]
+                }]
+            }]
+        }
+    </script>
+    <script>
+        var cinema = document.getElementById('cin');
+        for (var i = 0; i < getCinemas()[i].length; i++) {
+            // POPULATE SELECT ELEMENT WITH JSON.
+            cinema.innerHTML = cinema.innerHTML +
+                '<option value="' + getCinemas()[i].branchName + '">' + getCinemas()[i].branchName + '</option>';
+        }
+        }
+    </script>
+</body>
+<html>
